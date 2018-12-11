@@ -1,0 +1,865 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+p,
+option,
+h1,
+h2,
+h3,
+li {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*Grid*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+}
+
+
+
+/*Sign in / Sign up bar*/
+.loginSignUp {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.loginSignUp a {
+    color: white;
+    text-decoration: none;
+    padding-right: 12px;
+}
+
+.loginSignUp img {
+    width: 15px;
+    padding-left: 1px;
+    padding-right: 10px
+}
+
+.username {
+    float: left;
+}
+
+.loginSignUp a:hover {
+    color: #3abdff;
+    text-decoration: underline;
+}
+
+
+/*Header*/
+.header {
+    background-color: #334F6E;
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.logo {
+    background-color: #334F6E;
+    padding-top: 10px;
+}
+
+.logohome {
+    width: 140px;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*Navigation*/
+.nav {
+    background-color: #334F6E;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -20px;
+}
+
+.menu {
+    padding-top: 10px;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    border-right: 2px solid white;
+    color: white;
+    margin: 0 5px;
+    line-height: 50px;
+}
+
+.menu a:hover,
+a.active {
+    color: #3abdff;
+    border-bottom: 2px solid white;
+}
+
+label {
+    margin-right: 20px;
+    font-size: 26px;
+    line-height: 40px;
+    display: none;
+    color: white;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+    margin-right: 20px;
+
+}
+
+.search {
+    margin-left: 15px;
+}
+
+
+/*Breadcrumb*/
+.breadCrumb {
+    grid-column-start: 1;
+    grid-column-end: 12; 
+}
+
+.breadCrumb {
+        grid-column-start: 1;
+        grid-column-end: 12;
+        display: inline-block;
+    }
+
+    ul.breadcrumb {
+        height: 20px;
+        list-style: none;
+    }
+
+    /*BreadCrumbs*/
+    /* Display list items side by side */
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 13px;
+    }
+
+    /* Add a slash symbol (/) before/behind each list item */
+    ul.breadcrumb li + li:before {
+        padding-right: 10px;
+        color: black;
+        content: "/\00a0";
+    }
+
+    /* Add a color to all links inside the list */
+    ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    /* Add a color on mouse-over */
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+
+/*Slideshow*/
+.slideshow {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    height: 150px;
+    background-color: #3abdff;
+}
+
+.slideshow img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+
+/*Title*/
+.title {
+    background-color: #334F6E;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    display: flex;
+    margin-top: 10px;
+}
+
+.title h3 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Filters*/
+.filters {
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #334F6E;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+form p {
+    margin: 0;
+}
+
+fieldset {
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Main Section*/
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    text-align: center;
+   justify-content: center;
+}
+
+.panel {
+   
+    width: 260px;
+    max-width: 280px;
+    margin-bottom: 20px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: white;
+    box-shadow: 5px 10px #888888;
+}
+
+.panel img {
+    max-width: 100%;
+    height: 200px;
+}
+
+.panel,
+.panelGallery {
+    word-wrap: break-word;
+}
+
+.panel p,
+.panelGallery p {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.main h3,h4{
+    margin: 10 0;
+}
+
+/*Stars*/
+.checked {
+    color: orange;
+    
+}
+
+/*Footer*/
+.footer {
+    background-color: #3abdff;
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.logos,
+.footer p {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.logos img {
+display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 40px;
+    height: 50px;
+    padding-bottom: 20px;
+}
+
+/*Gallery CSS!!!*/
+.panelGallery,
+.panelGalleryRate {
+    display: inline-block;
+    width: 270px;
+    max-width: 300px;
+    margin-bottom: 40px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: white;
+    box-shadow: 5px 10px #888888;
+
+}
+
+.panelGalleryMain img {
+    max-width: 95%;
+    padding-top: 10px;
+}
+
+.descRating {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+
+}
+
+.username {
+    float: left;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.Date {
+    clear: both;
+    float: left;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.panelGallery h3,
+.panelGalleryRate h3 {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #334F6E;
+    color: white;
+}
+
+.comments {
+    display: block;
+    background-color: white;
+
+}
+.comments textarea{
+    width: 80%;
+}
+span {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.galleryItem {
+    border-color: #334F6E;
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Profile Page CSS!!!!*/
+.panelprofile {
+    display: inline-block;
+    width: 260px;
+    max-width: 280px;
+    margin-bottom: 20px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: white;
+    box-shadow: 5px 10px #888888;
+}
+
+.panelprofile img {
+    max-width: 100%;
+    height: 200px;
+}
+
+.panel,
+.panelprofile {
+    word-wrap: break-word;
+}
+
+.panelprofile p {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.containerprofile {
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.containerprofile h3 {
+    background-color: #334F6E;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    color: white;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.containerprofile {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.textprofile {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+
+.containerprofile1 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.containerprofile1 h3 {
+    background-color: #334F6E;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    color: white;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.containerprofile1 {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.textprofile1 {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.bannerprofile {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    height: 150px;
+    padding-top: 10px
+}
+
+/* Make the image responsive */
+.bannerprofile img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.bannerprofile .profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    min-height: 70px;
+    min-width: 70px;
+}
+
+.bannerprofile .btn1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.flex-containerprofile {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.flex-containerprofile button {
+    display: block;
+    background-color: #334F6E;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+}
+
+.flex-containerprofile button:hover {
+    background-color: #3abdff
+}
+
+.flex-containerprofile a{
+    text-decoration: none;
+}
+
+.linkedin{
+    display: flex;
+  
+}
+.linkedin p{
+      margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+/*Show Page CSS!!!!*/
+
+.flex-containershow {
+  display: flex;
+  justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    
+}
+
+.flex-containershow > button {
+  background-color: #334F6E;
+    color: white;  
+  margin: 5px;
+  text-align: center;
+  line-height: 15px;
+  font-size: 20px;
+
+    height: 40px;
+}
+.flex-containershow button:hover{
+    background-color: #3abdff
+}
+
+
+/*Admin Page CSS!!!!*/
+
+.panelMenu{
+      width: 260px;
+    
+    margin-bottom: 20px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: white;
+    box-shadow: 5px 10px #888888;
+}
+
+.adminMenu a{
+    display: block;
+    padding: 15px;
+    margin: 10px;
+     background-color: #334F6E;
+    color: white;
+    text-decoration: none;
+}
+
+.adminMenu a:hover{
+    background-color: #3abdff;
+}
+/*Width Before 476*/
+@media (max-width:476px) {
+    .panel {
+        width: 260px;
+        margin-top: 5px;
+    }
+
+    .panel img {
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid gray;
+        margin: 0;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    a.active {
+        color: #3abdff;
+    }
+
+}
+
+
+/*Width Before 684*/
+@media (max-width:684px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid gray;
+        margin: 0;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+    
+    
+    /*Profile Page CSS!!!!*/
+    .bannerprofile .profile{
+        height: 50px;
+        width: 50px;
+    }
+
+    .flex-containerprofile button{
+        width: 90px;
+        
+    }
+
+}
+
+
+/*Width after 686*/
+@media (min-width:686px) {
+    .menu a {
+        padding-right: 15px;
+        padding-left: 1px;
+    }
+
+    .breadCrumb {
+        grid-column-start: 1;
+        grid-column-end: 12;
+        display: inline-block;
+    }
+
+    ul.breadcrumb {
+        height: 20px;
+        list-style: none;
+    }
+
+    /*BreadCrumbs*/
+    /* Display list items side by side */
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 13px;
+    }
+
+    /* Add a slash symbol (/) before/behind each list item */
+    ul.breadcrumb li + li:before {
+        padding-right: 10px;
+        color: black;
+        content: "/\00a0";
+    }
+
+    /* Add a color to all links inside the list */
+    ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    /* Add a color on mouse-over */
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+
+    .panelGallery,
+    .panelGalleryRate {
+        width: 210px;
+    }
+
+    /*Profile Page CSS!!!!*/
+    .bannerprofile .profile{
+        height: 80px;
+        width: 80px;
+    }
+    
+    .flex-containerprofile button{
+        width: 190px;
+        font-size: 15px
+    }
+   
+
+}
+
+
+/*Width After 800*/
+@media (min-width:800px) {
+
+    .pageWrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .panel {
+        width: 280px;
+    }
+
+    .panel img {
+        width: 100%;
+    }
+
+    .slideshow {
+        height: 250px;
+    }
+
+    /*Sign in / Sign up bar*/
+    .loginSignUp {
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    .loginSignUp a {
+        color: white;
+        text-decoration: none;
+        padding-right: 12px;
+    }
+
+    .loginSignUp img {
+        width: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .logo img {
+        width: 170px;
+        height: 90px;
+        padding-bottom: 15px;
+    }
+
+    .panelGallery {
+        width: 250px;
+    }
+    
+    /*Profile Page CSS!!!!*/
+    .bannerprofile{
+        height: 250px;
+    }
+    
+    .bannerprofile .profile{
+        height: 150px;
+        width: 150px;
+    }
+    .flex-containerprofile button{
+        width: 205px;
+        font-size: 15px
+        
+    }
+    .panelprofile {
+        width: 280px;
+    }
+
+    .panelprofile img {
+        width: 100%;
+    }
+
+}
+
+
+/*Width after 1000*/
+@media (min-width:1000px) {
+
+    .pageWrapper {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .descRating {
+        align-content: center;
+    }
+
+    .panel {
+        width: 300px;
+    }
+
+    .panel img {
+        width: 100%;
+    }
+
+    .slideshow {
+        height: 350px;
+    }
+
+    .logo img {
+        width: 250px;
+        height: 80px;
+        padding-bottom: 35px;
+    }
+
+    .panelGallery,
+    .panelGalleryRate {
+
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+     /*Profile Page CSS!!!!*/
+    .flex-containerprofile button{
+        width: 260px;
+        font-size: 15px
+        
+    }
+    
+    .panelprofile {
+        width: 300px;
+    }
+
+    .panelprofile img {
+        width: 100%;
+    }
+}
