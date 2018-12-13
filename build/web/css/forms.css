@@ -1,4 +1,31 @@
+#m th, #m td {
+  padding: 0.8rem;
+  /*border-collapse: collapse; */
+  border-radius: 5px;
+}
+#m {
+  margin: 0px auto;
+  padding: 0.8rem;
+}
 
+/*#m tr:nth-child(1n) {
+  opacity: 0;
+}
+
+ To center just the first column 
+*/#m tr td:first-child {
+  text-align: center;
+}
+
+#m tr:nth-child(2n) {
+  background: #ff6666;
+}
+#m tr:nth-child(2n - 1) {
+  background: #fcfcfc;
+}
+#m tr:first-child th:first-child {
+  border-top-left-radius: 15px;
+}
 .logo {
     background-color: #334F6E;
     padding-top: 10px;

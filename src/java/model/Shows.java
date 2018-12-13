@@ -38,7 +38,7 @@ public class Shows implements Serializable {
 
     /**new delete if not working and add admin back to process save*/
     
-    public Shows(String date_of_show, String duration, String title, String description, String image) {
+    public Shows(String date_of_show, String duration, String title, String description, String image) { 
      
         this.date_of_show = date_of_show;
         this.duration = duration;
@@ -206,6 +206,7 @@ public class Shows implements Serializable {
                 Shows s = new Shows();
                 s.setShow_id(resultSet.getInt("show_id"));
                 s.setDate_of_show(resultSet.getString("date_of_show"));
+                s.setDescription(resultSet.getString("description"));
                 s.setDuration(resultSet.getString("duration"));
                 s.setTitle(resultSet.getString("title"));
                 s.setImage(resultSet.getString("image"));
@@ -237,6 +238,7 @@ public class Shows implements Serializable {
                 s.setShow_id(resultSet.getInt("show_id"));
                 s.setDate_of_show(resultSet.getString("date_of_show"));
                 s.setDuration(resultSet.getString("duration"));
+                s.setDescription(resultSet.getString("description"));
                 s.setTitle(resultSet.getString("title"));
                 s.setImage(resultSet.getString("image"));
                 //s.setUserId(resultSet.getInt("UserId"));
@@ -251,8 +253,9 @@ public class Shows implements Serializable {
             return null;
         }
         
-
+        System.out.println("got show details"+s);
         return s;
+        
     }
     
     

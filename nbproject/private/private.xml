@@ -3,19 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Group/Project/web/manageUsers.jsp</file>
-            <file>file:/D:/Group/Project/src/java/controller/AdminController.java</file>
-            <file>file:/D:/Group/Project/web/AdminHomepage.jsp</file>
-            <file>file:/D:/Group/Project/src/java/controller/ShowsController.java</file>
-            <file>file:/D:/Group/Project/web/manageShows.jsp</file>
-            <file>file:/D:/Group/Project/web/adminSignup.jsp</file>
-            <file>file:/D:/Group/Project/src/java/model/DatabaseUtilityClass.java</file>
+            <file>file:/D:/Group/Project/web/detailedShowView.jsp</file>
             <file>file:/D:/Group/Project/web/AddShow.jsp</file>
             <file>file:/D:/Group/Project/src/java/model/Admin.java</file>
-            <file>file:/D:/Group/Project/web/deleteShow.jsp</file>
-            <file>file:/D:/Group/Project/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Group/Project/src/java/controller/ShowsController.java</file>
+            <file>file:/D:/Group/Project/web/AdminHomepage.jsp</file>
+            <file>file:/D:/Group/Project/web/manageShows.jsp</file>
             <file>file:/D:/Group/Project/web/adminlogin.jsp</file>
-            <file>file:/D:/Group/Project/src/java/controller/Admin2Controller.java</file>
             <file>file:/D:/Group/Project/src/java/model/Shows.java</file>
         </group>
     </open-files>

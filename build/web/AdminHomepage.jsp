@@ -31,7 +31,7 @@
             <div class="header">
 
                 <div class="loginSignUp">
-                    <a class="username" href="profile.html"><img src="img/039.jpeg" alt="Profile Picture">User Name</a>
+                    <a class="username" href="profile.html"><img src="img/039.jpeg" alt="Profile Picture">${Admin.username}</a>
                     <a href="signIn.html">Sign In</a>
                     <a href="signUp.html">Sign Up</a>
                     <a href="#">Log Out</a>
@@ -85,9 +85,17 @@
                         <a href="manageUsers.html">Manage Users</a>
                         <a href="manageTags.html">Manage Tags</a>
                         <a href="deleteProfile.html">Delete Profile</a>
+                        
+                         <form action="ShowsController" class="shows-page">
                         <a href="AddShow.jsp">Create Show</a>
+                         </form>
                         <a href="deleteShow.jsp">Delete Show</a>
-                        <a href="manageShows.jsp">Manage Show</a>
+                        
+                        <form action="ShowsController" class="shows-page">
+                          <input type="submit" name="home" value="manageShows"/>
+                        </form>
+                        
+                        
                          
                         
                     </div>

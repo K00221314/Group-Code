@@ -171,7 +171,7 @@ public class Admin implements Serializable {
 //        
 //    }
 
-    public Admin getUserDetails(int userId) {
+    public Admin getUserDetails(int user_id) {
         Admin u = null; 
         Connection connection = DatabaseUtilityClass.getConnection();
         PreparedStatement ps = null;
@@ -182,7 +182,7 @@ public class Admin implements Serializable {
         try{
             ps = connection.prepareStatement(query);
             ps.setString(1, this.getF_name());
-            ps.setString(2, this.getL_name());
+             ps.setString(2, this.getL_name());
             ps.setString(3, this.getEmail());
             ps.setString(4, this.getUsername());
             ps.setString(5, this.getProfile_pic());

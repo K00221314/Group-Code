@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,6 +22,7 @@ import model.Shows;
  *
  * @author k00221314
  */
+@WebServlet(name = "ShowsController", urlPatterns = {"/ShowsController"})
 public class ShowsController extends HttpServlet {
 
     
@@ -42,33 +44,31 @@ public class ShowsController extends HttpServlet {
             session.setAttribute("shows", shows);
         }
         
-
-//        menu = request.getParameter("menu");
-//        if (menu == null) {
-//            menu = "home";
-//        }
+        String menu="home";
+        menu = request.getParameter("menu");
         
-//        if (isMultipart) {
-//            System.out.println("multi request");
-//            get list of item in request
-//            FileItemFactory factory = new DiskFileItemFactory();
-//            ServletFileUpload upload = new ServletFileUpload(factory);
-//
-//            try {
-//                items = upload.parseRequest(request);
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//            menu = getMultiRequest(items, "menu");
-//
-//        } else {
-//            System.out.println("single request");
-//            menu = request.getParameter("menu");
-//
-//        }
-         System.out.println("Show 2");
-         String menu =request.getParameter("menu");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        if (menu == null) {
+            System.out.println("menu is null");
+            menu = "home";
+        }
+        
+//         String menu =request.getParameter("menu");
         switch (menu) {
              
 //            case "Add":
@@ -76,14 +76,14 @@ public class ShowsController extends HttpServlet {
 //                gotoPage("/AddShows.jsp", request, response);
 //                break;
 
-//            case "home":
-//                System.out.println("Show 3");
-//                Shows show = new Shows();
-//                ArrayList<Shows> allshows = new ArrayList<>();
-//                allshows = show.getAllShows();
-//                session.setAttribute("allshows", allshows);
-//                gotoPage("/AdminHomepage.jsp", request, response);
-//                break;
+            case "home":
+                System.out.println("Show 3");
+                Shows show = new Shows();
+                ArrayList<Shows> allshows = new ArrayList<>();
+                allshows = show.getAllShows();
+                session.setAttribute("allshows", allshows);
+                gotoPage("/manageShows.jsp", request, response);
+                break;
                 
             case "Save Show":
                 System.out.println("in process save switch");
@@ -105,7 +105,7 @@ public class ShowsController extends HttpServlet {
                 
                 break; 
             case "updateShow":
-                gotoPage("/DetailedNoticeView.jsp", request, response);
+                gotoPage("/detailedShowView.jsp", request, response);
                 break; 
             case "Update":
                 ProcessUpdate(request, session, shows);
@@ -132,31 +132,31 @@ public class ShowsController extends HttpServlet {
 //                gotoPage("/UserHomePage.jsp", request, response);
 //                break;       
             case "getShowView":
-                //get notice id
+                
                 String showid = request.getParameter("show_id");
                 int show_id = Integer.parseInt(showid);
-
-                //call to notice model to get notice details
+                System.out.println("show_id"+show_id);
+                
                 Shows s = new Shows();
                 s = s.getShowDetails(show_id);
                 
                 if (s != null) {
                     
                     session.setAttribute("shows", s);
-                    //get user details for notcie
-                    Admin u = new Admin();
-                   // System.out.println("get user details " + s. );
-                   // u = u.getUserDetails(s.getUserId());
+                    System.out.println("sesion contents"+session.getAttribute("shows"));
+                     Admin u = new Admin();
+                    System.out.println("get user details " + u.getUser_id() );
+                    u = u.getUserDetails(s.getShow_id());
                     if(u!=null) {
-                        System.out.println("notice user" + u.getUsername());
-                        session.setAttribute("noticeUser", u);
+                        System.out.println("shows" + u.getUsername());
+                        session.setAttribute("showUsername", u);
                     }
                     else{
                         System.out.println("user details null");
                     }
                     
                 }
-                gotoPage("/DetailedNoticeView.jsp", request, response);
+                gotoPage("/detailedShowView.jsp", request, response);
                 break;
             default:
                 gotoPage("/invalid.jsp", request, response);
